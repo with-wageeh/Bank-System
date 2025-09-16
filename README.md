@@ -1,14 +1,28 @@
-# Bank Management System 
+# 🏦 Bank System
 
-## Overview
-A small object-oriented bank system written in modern C++ (C++17).  
-Features accounts (Checking, Saving, Loan), customers holding sets of accounts, transaction history, and a simple in-memory authentication service. The code is split into modular headers and source files for clarity and maintainability.
+## 📌 Overview
+The **Bank Management System** is a modular, object-oriented C++17 project.  
+It demonstrates **OOP principles** (inheritance, polymorphism, encapsulation) while simulating a simplified bank with accounts, customers, transactions, and authentication.  
+The project is split into multiple headers and source files for clarity and maintainability.
 
-## Features
-- Account types: `Checking`, `Saving`, `Loan` (polymorphic `Account` base).
-- Customers hold accounts in an ordered `set` with custom comparator.
-- Binary-search-based deposit/withdraw helpers on ordered vectors for faster lookups.
-- Transaction history and simple `Authentication`.
-- `Date` and `Address` utility structs.
+---
 
-## Files / Structure
+## ✨ Features
+- **Accounts**:
+  - `Checking` — supports deposits/withdrawals with overdraft limit.
+  - `Saving` — supports deposits, withdrawals, and monthly interest updates.
+  - `Loan` — tracks principal, remaining balance, and payment due dates.
+- **Customers**:
+  - Hold accounts inside an ordered `set` with a custom comparator.
+  - Deposit/withdraw operations use **binary search** on a vector for faster lookup.
+- **Transactions**:
+  - `Transaction` and `Transaction_History` classes to store and print past operations.
+- **Authentication**:
+  - Register, login, and change password with an in-memory `unordered_map`.
+- **Utilities**:
+  - `Date` and `Address` structs to manage extra details.
+- **Bank Service**:
+  - Central manager for customers, transactions, and account operations.
+
+---
+
